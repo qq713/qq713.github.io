@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片处理工具</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>图片处理工具</h1>
+        <div class="main-buttons">
+            <button id="compressButton" class="main-btn">图片压缩</button>
+            <button id="convertButton" class="main-btn">格式转换</button>
+        </div>
+        
+        <!-- 压缩模态框 -->
+        <div id="compressModal" class="modal">
+            <div class="modal-content">
+                <div class="input-group">
+                    <input type="number" id="compressSize" placeholder="输入压缩后的图片大小">
+                    <span class="unit">KB</span>
+                </div>
+                <button id="startCompress" class="modal-btn">开始压缩</button>
+            </div>
+        </div>
+
+        <!-- 隐藏的文件输入框 -->
+        <input type="file" id="fileInput" style="display: none" accept="image/*">
+        
+        <!-- 格式转换模态框 -->
+        <div id="convertModal" class="modal">
+            <div class="modal-content">
+                <select id="formatSelect" class="format-select">
+                    <option value="image/jpeg">JPG</option>
+                    <option value="image/png">PNG</option>
+                    <option value="image/webp">WEBP</option>
+                </select>
+                <div class="modal-buttons">
+                    <button id="selectFolder" class="modal-btn">选择文件夹</button>
+                    <button id="selectFile" class="modal-btn">选择单个文件</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html> 
